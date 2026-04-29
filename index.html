@@ -4,48 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryce Rennie | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <header>
-        <h1>Bryce Rennie</h1>
-        <p>Welcome to my website.</p>
+        <div class="header-gif-frame">
+            <img src="images/dragonite.gif" alt="Dragonite GIF" class="header-gif header-gif-left">
+        </div>
+        <div class="header-content">
+            <h1>Bryce Rennie</h1>
+            <p>Welcome to my personal website.</p>
+        </div>
+        <div class="header-gif-frame">
+            <img src="images/char_x.gif" alt="Mega Charizard X GIF" class="header-gif header-gif-right">
+        </div>
     </header>
 
     <main>
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>
-                Hi! My name is Bryce Rennie. I am building my first website and using it to share a few
-                things about myself, including the hobbies and stuff I enjoy.
+                Hi! My name is Bryce Rennie. I am building my first personal website and using it to share a few
+                things about myself, including the hobbies and topics I enjoy most.
             </p>
         </section>
 
-        <section>
+        <section id="interests">
             <h2>My Interests</h2>
-            <ul>
-                <li>Music</li>
-                <li>Traveling</li>
-                <li>Pokemon</li>
-            </ul>
+            <div class="interest-card">
+                <h3>Music</h3>
+                <p>Listening to music is one of my main interests.</p>
+                <p>
+                    <a href="https://open.spotify.com/playlist/4PJigw8NSrUWOU0WRzYTpc?si=eb5f310552cf44c2" target="_blank" class="social-link">
+                        <img src="images/insgramlogo.jpg" alt="Spotify icon" class="social-icon">
+                        My Playlist
+                    </a>
+                </p>
+            </div>
+
+            <div class="interest-card">
+                <h3>Traveling</h3>
+                <p>I enjoy traveling and getting to experience new places.</p>
+                <div class="travel-carousel">
+                    <input type="radio" name="travel-slide" id="travel-slide-1" checked>
+                    <input type="radio" name="travel-slide" id="travel-slide-2">
+                    <input type="radio" name="travel-slide" id="travel-slide-3">
+
+                    <div class="travel-carousel-window">
+                        <div class="travel-carousel-track">
+                            <img src="images/DSC_0213.JPG" alt="Bryce traveling with a city view behind him" class="travel-photo">
+                            <img src="images/JpnSkyline.JPG" alt="A skyline travel photo with mountains and clouds" class="travel-photo">
+                            <img src="images/DSC_0427.JPG" alt="A travel photo by the water with colorful buildings" class="travel-photo">
+                        </div>
+                    </div>
+
+                    <div class="travel-carousel-nav">
+                        <label for="travel-slide-1" class="travel-dot"></label>
+                        <label for="travel-slide-2" class="travel-dot"></label>
+                        <label for="travel-slide-3" class="travel-dot"></label>
+                    </div>
+                </div>
+
+                <div class="travel-carousel">
+                    <input type="radio" name="travel-slide-two" id="travel-slide-two-1" checked>
+                    <input type="radio" name="travel-slide-two" id="travel-slide-two-2">
+                    <input type="radio" name="travel-slide-two" id="travel-slide-two-3">
+
+                    <div class="travel-carousel-window">
+                        <div class="travel-carousel-track">
+                            <img src="images/DSC_0910.JPG" alt="Bryce standing in the snow by a blue lake" class="travel-photo">
+                            <img src="images/DSC_0479.JPG" alt="Golden Gate Bridge travel photo" class="travel-photo">
+                            <img src="images/DSC_0692.JPG" alt="City travel photo with skyline in the background" class="travel-photo">
+                        </div>
+                    </div>
+
+                    <div class="travel-carousel-nav">
+                        <label for="travel-slide-two-1" class="travel-dot"></label>
+                        <label for="travel-slide-two-2" class="travel-dot"></label>
+                        <label for="travel-slide-two-3" class="travel-dot"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <h3>Pokemon</h3>
+                <p>Pokemon is one of my favorite interests, and I wanted to show it on my site.</p>
+                <img src="images/shiny-celebi-pokemon-colosseum.gif" alt="A shiny Celebi Pokemon GIF" class="feature-gif">
+            </div>
         </section>
 
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <div class="project-card">
                 <h3>My First Website</h3>
                 <p>
                     This website is my first project. I made it using only HTML and CSS to practice the basics of web
-                    design. Who knows what comes from this site
+                    design and create a simple space on the internet for myself.
                 </p>
             </div>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
-            <p>Email: aznbirdflu34@yahoo.com</p>
+            <p>Reach out through any of these links.</p>
+            <div class="contact-buttons">
+                <a href="mailto:aznbirdflu34@yahoo.com" class="contact-button">
+                    <span class="contact-button-text">Email</span>
+                </a>
+
+                <a href="https://www.instagram.com/brv.ce?igsh=NTc4MTIwNjQ2YQ%3D%3D&amp;utm_source=qr" target="_blank" class="contact-button">
+                    <img src="images/81-814993_instagram-icon-png-white-transparent-png.png" alt="Instagram icon" class="social-icon">
+                    <span class="contact-button-text">Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/bryce-rennie-476106263" target="_blank" class="contact-button">
+                    <img src="images/linkedin-icon-isolated-white-background-letter-logotype-social-media-app-square-button-logo_989822-4651.jpg" alt="LinkedIn icon" class="social-icon">
+                    <span class="contact-button-text">LinkedIn</span>
+                </a>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>Built by Bryce Rennie with HTML and CSS.</p>
+    </footer>
 </body>
 </html>
 
