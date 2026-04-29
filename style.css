@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f7fb;
+    color: #333333;
+}
+
+header {
+    background: linear-gradient(135deg, #111111, #2b2b2b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 22px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    margin-top: 0;
+}
+
+header h1 {
+    animation: fadeSlideDown 1s ease-out;
+}
+
+header p {
+    animation: fadeSlideUp 1.2s ease-out;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    margin-bottom: 0;
+}
+
+.header-gif-frame {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header-gif {
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-gif-left {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.header-gif-right {
+    max-width: 98px;
+    max-height: 98px;
+}
+
+.project-card {
+    background-color: #eef4ff;
+    border-left: 5px solid #2f6fed;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.interest-card {
+    background-color: #f8fbff;
+    border-left: 5px solid #5aa4ff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.interest-card p {
+    margin-bottom: 0;
+}
+
+.travel-carousel {
+    margin-top: 16px;
+}
+
+.travel-carousel input {
+    display: none;
+}
+
+.travel-carousel-window {
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #dfe9fb;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.travel-carousel-track {
+    display: flex;
+    width: 300%;
+    transition: transform 0.4s ease;
+}
+
+.travel-photo {
+    width: 33.3333%;
+    height: 320px;
+    object-fit: contain;
+    flex: 0 0 33.3333%;
+    display: block;
+}
+
+.travel-carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.travel-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #c2d3f7;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.travel-dot:hover {
+    transform: scale(1.1);
+    background-color: #7ea7f5;
+}
+
+#travel-slide-1:checked ~ .travel-carousel-window .travel-carousel-track {
+    transform: translateX(0);
+}
+
+#travel-slide-2:checked ~ .travel-carousel-window .travel-carousel-track {
+    transform: translateX(-33.3333%);
+}
+
+#travel-slide-3:checked ~ .travel-carousel-window .travel-carousel-track {
+    transform: translateX(-66.6666%);
+}
+
+#travel-slide-1:checked ~ .travel-carousel-nav label[for="travel-slide-1"],
+#travel-slide-2:checked ~ .travel-carousel-nav label[for="travel-slide-2"],
+#travel-slide-3:checked ~ .travel-carousel-nav label[for="travel-slide-3"] {
+    background-color: #2f6fed;
+    transform: scale(1.12);
+}
+
+.feature-gif {
+    width: 180px;
+    display: block;
+    margin: 16px 0 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.social-link {
+    color: #2f6fed;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-label {
+    color: #333333;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    .header-gif {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .header-gif-frame {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-gif-left {
+        max-width: 82px;
+        max-height: 82px;
+    }
+
+    .header-gif-right {
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    .travel-photo {
+        height: 240px;
+    }
+}
